@@ -32,6 +32,7 @@ let s:type="#A74047"
 let s:var="#1155A3"
 let s:warning="#F93232"
 let s:warning2="#e36209"
+let s:highlight="#55efc4"
 
 exe 'hi Normal guifg='s:fg' guibg='s:bg
 exe 'hi Cursor guifg='s:bg' guibg='s:fg
@@ -42,12 +43,12 @@ exe 'hi ColorColumn  guibg='s:bg2
 exe 'hi SignColumn   guibg=NONE'
 exe 'hi LineNr guifg='s:lightcomment' guibg='s:bg2
 exe 'hi VertSplit guifg='s:bg4' guibg=NONE gui=none'
-exe 'hi MatchParen guifg='s:warning2'  gui=underline'
+exe 'hi MatchParen guifg='s:fg'  gui=underline guibg='s:highlight
 exe 'hi StatusLine guifg='s:fg2' guibg='s:bg
 exe 'hi Pmenu guifg='s:fg' guibg='s:bg2
 exe 'hi PmenuSel  guibg='s:bg3
 exe 'hi IncSearch guifg='s:bg' guibg='s:keyword
-exe 'hi Search   gui=underline'
+exe 'hi Search   gui=underline guibg='s:highlight
 exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
