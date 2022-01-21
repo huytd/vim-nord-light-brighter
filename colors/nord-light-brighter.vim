@@ -29,6 +29,7 @@ let s:lightcomment="#d1d1d1"
 let s:func="#0D5C43"
 let s:str="#50750E"
 let s:type="#A74047"
+let s:value="#A74047"
 let s:var="#1155A3"
 let s:warning="#F93232"
 let s:warning2="#e36209"
@@ -53,10 +54,9 @@ exe 'hi Directory guifg='s:const
 exe 'hi Folded guifg='s:fg4' guibg='s:bg
 exe 'hi WildMenu guifg='s:str' guibg='s:bg
 
-exe 'hi Boolean guifg='s:const
-exe 'hi Character guifg='s:const
+exe 'hi Boolean guifg='s:value
 exe 'hi Comment guifg='s:comment
-exe 'hi Conditional guifg='s:keyword
+exe 'hi Conditional guifg='s:keyword' gui=bold'
 exe 'hi Constant guifg='s:const
 exe 'hi Todo guibg='s:bg
 exe 'hi Define guifg='s:keyword
@@ -66,13 +66,13 @@ exe 'hi DiffChange  guifg=#5b76ef guibg=NONE'
 exe 'hi DiffText guifg=#ffffff guibg=#ff0000 gui=bold'
 exe 'hi ErrorMsg guifg='s:warning' guibg='s:bg2' gui=bold'
 exe 'hi WarningMsg guifg='s:fg' guibg='s:warning2
-exe 'hi Float guifg='s:const
+exe 'hi Float guifg='s:value
 exe 'hi Function guifg='s:func
 exe 'hi Identifier guifg='s:var
 exe 'hi Keyword guifg='s:keyword'  gui=bold'
 exe 'hi Label guifg='s:var
 exe 'hi NonText guifg='s:lightcomment' guibg='s:bg
-exe 'hi Number guifg='s:const
+exe 'hi Number guifg='s:value
 exe 'hi Operator guifg='s:keyword
 exe 'hi PreProc guifg='s:keyword
 exe 'hi Special guifg='s:fg
@@ -80,11 +80,14 @@ exe 'hi SpecialKey guifg='s:fg2' guibg='s:bg2
 exe 'hi Statement guifg='s:keyword
 exe 'hi StorageClass guifg='s:type'  gui=italic'
 exe 'hi String guifg='s:str
+exe 'hi Character guifg='s:str
 exe 'hi Tag guifg='s:keyword
 exe 'hi Title guifg='s:fg'  gui=bold'
 exe 'hi Todo guifg='s:fg2'  gui=inverse,bold'
 exe 'hi Type guifg='s:type
 exe 'hi Underlined   gui=underline'
+exe 'hi Include   gui=bold'
+exe 'hi Define   gui=bold'
 
 exe 'hi IndentBlanklineChar  guifg='s:bg2
 exe 'hi NvimTreeIndentMarker guifg='s:bg2
